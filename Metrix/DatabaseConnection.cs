@@ -35,6 +35,31 @@ namespace Metrix
 
             conn = new MySqlConnection(connectionString);
         
+        }
+
+        //open connection to database
+        private bool OpenConnection(){
+        
+        }
+
+        //Close connection
+        private bool CloseConnection(){
+        
+        
+        }
+
+        //Insert statement
+        public void Insert(){
+        
+        }
+
+        //Update statement
+        public void Update(){
+        
+        }
+
+        //Delete statement
+        public void Delete(){
         
         }
 
