@@ -32,6 +32,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSupSave = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.SupRefName_txt = new System.Windows.Forms.TextBox();
             this.SupEmail_txt = new System.Windows.Forms.TextBox();
@@ -158,7 +159,9 @@
             this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSupSave = new System.Windows.Forms.Button();
+            this.btnSupUpdate = new System.Windows.Forms.Button();
+            this.btnSupDelete = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -189,6 +192,7 @@
             this.panel20.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,7 +211,7 @@
             this.tabControl1.Location = new System.Drawing.Point(6, 73);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(693, 403);
+            this.tabControl1.Size = new System.Drawing.Size(705, 472);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
@@ -217,7 +221,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(685, 371);
+            this.tabPage2.Size = new System.Drawing.Size(697, 440);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Home";
             // 
@@ -227,7 +231,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(685, 371);
+            this.tabPage1.Size = new System.Drawing.Size(697, 440);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Supplier";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -235,13 +239,25 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.panel3.Controls.Add(this.btnSupDelete);
+            this.panel3.Controls.Add(this.btnSupUpdate);
             this.panel3.Controls.Add(this.btnSupSave);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(604, 353);
+            this.panel3.Size = new System.Drawing.Size(697, 437);
             this.panel3.TabIndex = 0;
+            // 
+            // btnSupSave
+            // 
+            this.btnSupSave.Location = new System.Drawing.Point(349, 359);
+            this.btnSupSave.Name = "btnSupSave";
+            this.btnSupSave.Size = new System.Drawing.Size(75, 32);
+            this.btnSupSave.TabIndex = 2;
+            this.btnSupSave.Text = "Save";
+            this.btnSupSave.UseVisualStyleBackColor = true;
+            this.btnSupSave.Click += new System.EventHandler(this.btnSupSave_Click);
             // 
             // panel5
             // 
@@ -251,7 +267,7 @@
             this.panel5.Controls.Add(this.SupConNo_txt);
             this.panel5.Controls.Add(this.SupName_txt);
             this.panel5.Controls.Add(this.SupId_txt);
-            this.panel5.Location = new System.Drawing.Point(207, 33);
+            this.panel5.Location = new System.Drawing.Point(303, 33);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(217, 259);
             this.panel5.TabIndex = 1;
@@ -309,7 +325,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lblId);
-            this.panel4.Location = new System.Drawing.Point(41, 33);
+            this.panel4.Location = new System.Drawing.Point(102, 33);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(139, 259);
             this.panel4.TabIndex = 0;
@@ -345,7 +361,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Address";
+            this.label4.Text = "Location";
             // 
             // label3
             // 
@@ -388,7 +404,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(685, 371);
+            this.tabPage3.Size = new System.Drawing.Size(697, 440);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Customer";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -508,7 +524,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(685, 371);
+            this.tabPage4.Size = new System.Drawing.Size(697, 440);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Invoice";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -700,7 +716,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 28);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(685, 371);
+            this.tabPage5.Size = new System.Drawing.Size(697, 440);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Order";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
@@ -1222,7 +1238,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 28);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(685, 371);
+            this.tabPage8.Size = new System.Drawing.Size(697, 440);
             this.tabPage8.TabIndex = 8;
             this.tabPage8.Text = "Product";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1406,6 +1422,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.btnHome);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(171, 548);
@@ -1421,15 +1438,34 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnSupSave
+            // btnSupUpdate
             // 
-            this.btnSupSave.Location = new System.Drawing.Point(321, 310);
-            this.btnSupSave.Name = "btnSupSave";
-            this.btnSupSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSupSave.TabIndex = 2;
-            this.btnSupSave.Text = "Save";
-            this.btnSupSave.UseVisualStyleBackColor = true;
-            this.btnSupSave.Click += new System.EventHandler(this.btnSupSave_Click);
+            this.btnSupUpdate.Location = new System.Drawing.Point(465, 359);
+            this.btnSupUpdate.Name = "btnSupUpdate";
+            this.btnSupUpdate.Size = new System.Drawing.Size(75, 32);
+            this.btnSupUpdate.TabIndex = 3;
+            this.btnSupUpdate.Text = "Update";
+            this.btnSupUpdate.UseVisualStyleBackColor = true;
+            this.btnSupUpdate.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnSupDelete
+            // 
+            this.btnSupDelete.Location = new System.Drawing.Point(575, 359);
+            this.btnSupDelete.Name = "btnSupDelete";
+            this.btnSupDelete.Size = new System.Drawing.Size(75, 32);
+            this.btnSupDelete.TabIndex = 4;
+            this.btnSupDelete.Text = "Delete";
+            this.btnSupDelete.UseVisualStyleBackColor = true;
+            this.btnSupDelete.Click += new System.EventHandler(this.btnSupDelete_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(40, 469);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.TabIndex = 6;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1486,6 +1522,7 @@
             this.panel22.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1624,6 +1661,9 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSupSave;
+        private System.Windows.Forms.Button btnSupUpdate;
+        private System.Windows.Forms.Button btnSupDelete;
+        private System.Windows.Forms.Button btnHome;
     }
 }
 

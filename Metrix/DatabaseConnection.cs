@@ -10,32 +10,33 @@ namespace Metrix
 {
     class DatabaseConnection{
 
-        private MySqlConnection conn; //opening a connection
+        public MySqlConnection conn; //opening a connection
+        public MySqlCommand cmd;
         private string server; 
-        private string db; //database name
+        public string db; //database name
         private string uid; //username
         private string pass; //password
 
         //Constructer
         public DatabaseConnection() {
-
-            Initialize();    
-        
-        }
-
-        //initialize values
-        private void Initialize() {
-
+            conn = new MySqlConnection();
+            cmd = new MySqlCommand();         
             server = "localhost";
             db = "metrix";
             uid = "root";
             pass = "";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+            conn.ConnectionString = "SERVER=" + server + ";" + "DATABASE=" +
             db + ";" + "UID=" + uid + ";" + "PASSWORD=" + pass + ";";
+            cmd.Connection = conn;
+           
+        }
 
-            conn = new MySqlConnection(connectionString);
-        
+        //initialize values
+        public MySqlCommand Initialize()
+        {
+
+            cmd.Connection = conn;
+            return cmd;        
         }
 
         //open connection to database

@@ -120,6 +120,38 @@ namespace Metrix
         private void btnSupSave_Click(object sender, EventArgs e)
         {
 
+            ForeignSupplier fr = new ForeignSupplier();
+            fr.supIdValue = int.Parse(SupId_txt.Text);
+            fr.companyNameValue = SupName_txt.Text;
+            fr.contactValue = SupConNo_txt.Text;
+            fr.countryValue = SupAddress_txt.Text;
+            fr.emailValue = SupEmail_txt.Text;
+            fr.refNameValue = SupRefName_txt.Text;
+            fr.SupplierSave();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ForeignSupplier fr = new ForeignSupplier();
+            fr.supIdValue = int.Parse(SupId_txt.Text);
+            fr.companyNameValue = SupName_txt.Text;
+            fr.contactValue = SupConNo_txt.Text;
+            fr.countryValue = SupAddress_txt.Text;
+            fr.emailValue = SupEmail_txt.Text;
+            fr.refNameValue = SupRefName_txt.Text;
+            fr.SupplierUpdate();
+        }
+
+        private void btnSupDelete_Click(object sender, EventArgs e)
+        {
+            ForeignSupplier fr = new ForeignSupplier();
+            fr.supIdValue = int.Parse(SupId_txt.Text);
+            fr.companyNameValue = SupName_txt.Text;
+            fr.contactValue = SupConNo_txt.Text;
+            fr.countryValue = SupAddress_txt.Text;
+            fr.emailValue = SupEmail_txt.Text;
+            fr.refNameValue = SupRefName_txt.Text;
+            fr.SupplierDelete();
         }
     }
 }
