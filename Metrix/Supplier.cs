@@ -15,7 +15,8 @@ namespace Metrix
         private string refName;
         private string email;
 
-        public int supIdValue {
+        public int supIdValue
+        {
 
             get 
             {
@@ -27,7 +28,8 @@ namespace Metrix
             }
         }
 
-        public string companyNameValue {
+        public string companyNameValue
+        {
 
             get 
             {
@@ -40,7 +42,8 @@ namespace Metrix
         
         }
 
-        public string countryValue {
+        public string countryValue
+        {
 
             get 
             {

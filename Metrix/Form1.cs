@@ -153,5 +153,147 @@ namespace Metrix
             fr.refNameValue = SupRefName_txt.Text;
             fr.SupplierDelete();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Customer cus = new Customer();
+            cus.cusIdValue = int.Parse(CusID_txt.Text);
+            cus.cusNameValue = CusName_txt.Text;
+            cus.cusContactValue = int.Parse(CusConNo_txt.Text);
+            cus.cusNicValue = CusNic_txt.Text;
+            cus.cusAdLine1Value = CusAddress1_txt.Text;
+            cus.cusAdLine2Value = CusAddress2_txt.Text;
+            cus.cusAdLine3Value = CusAddress3_txt.Text;
+            cus.CustomerDelete();
+        }
+
+        private void btnCusSave_Click(object sender, EventArgs e)
+        {
+            Customer cus = new Customer();
+            cus.cusIdValue = int.Parse(CusID_txt.Text);
+            cus.cusNameValue = CusName_txt.Text;
+            cus.cusContactValue = int.Parse(CusConNo_txt.Text);
+            cus.cusNicValue = CusNic_txt.Text;
+            cus.cusAdLine1Value = CusAddress1_txt.Text;
+            cus.cusAdLine2Value = CusAddress2_txt.Text;
+            cus.cusAdLine3Value = CusAddress3_txt.Text;
+            cus.CustomerSave();
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCusUpdate_Click(object sender, EventArgs e)
+        {
+            Customer cus = new Customer();
+            cus.cusIdValue = int.Parse(CusID_txt.Text);
+            cus.cusNameValue = CusName_txt.Text;
+            cus.cusContactValue = int.Parse(CusConNo_txt.Text);
+            cus.cusNicValue = CusNic_txt.Text;
+            cus.cusAdLine1Value = CusAddress1_txt.Text;
+            cus.cusAdLine2Value = CusAddress2_txt.Text;
+            cus.cusAdLine3Value = CusAddress3_txt.Text;
+            cus.CustomerUpdate();
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmpSave_Click(object sender, EventArgs e)
+        {
+            Employee em = new Employee();
+            em.empIdValue = int.Parse(Empid_txt.Text);
+            em.empNameValue = EmpName_txt.Text;
+            em.empContactValue = int.Parse(EmpContact_text.Text);
+            em.empAdLine1Value = EmpAdLine1_text.Text;
+            em.empAdLine2Value = EmpAdLine2_text.Text;
+            em.empDobValue = EmpDob_text.Text;
+            em.empNicValue = EmpNic_text.Text;
+            em.empPosValue = EmpPos_text.Text;
+            em.empDeptValue = EmpDept_text.Text;
+            em.EmployeeSave();
+        }
+
+        private void btnEmpUpdate_Click(object sender, EventArgs e)
+        {
+            Employee em = new Employee();
+            em.empIdValue = int.Parse(Empid_txt.Text);
+            em.empNameValue = EmpName_txt.Text;
+            em.empContactValue = int.Parse(EmpContact_text.Text);
+            em.empAdLine1Value = EmpAdLine1_text.Text;
+            em.empAdLine2Value = EmpAdLine2_text.Text;
+            em.empDobValue = EmpDob_text.Text;
+            em.empNicValue = EmpNic_text.Text;
+            em.empPosValue = EmpPos_text.Text;
+            em.empDeptValue = EmpDept_text.Text;
+            em.EmployeeUpdate();
+        }
+
+        private void btnEmpDelete_Click(object sender, EventArgs e)
+        {
+            Employee em = new Employee();
+            em.empIdValue = int.Parse(Empid_txt.Text);
+            em.empNameValue = EmpName_txt.Text;
+            em.empContactValue = int.Parse(EmpContact_text.Text);
+            em.empAdLine1Value = EmpAdLine1_text.Text;
+            em.empAdLine2Value = EmpAdLine2_text.Text;
+            em.empDobValue = EmpDob_text.Text;
+            em.empNicValue = EmpNic_text.Text;
+            em.empPosValue = EmpPos_text.Text;
+            em.empDeptValue = EmpDept_text.Text;
+            em.EmployeeDelete();
+        }
+
+        private void btnProdSave_Click(object sender, EventArgs e)
+        {
+            Product pr = new Product();
+            pr.prodIdValue = int.Parse(ProductId_text.Text);
+            pr.nameValue = ProdName_text.Text;
+            pr.brandValue = ProdBrand_text.Text;
+            pr.countryValue = ProdCon_text.Text;
+            pr.supIdValue =int.Parse(ProdSupid_text.Text);
+            pr.purchPriceValue =int.Parse(ProdPurch_text.Text);
+            pr.salePriceValue = int.Parse(ProdSales_text.Text);
+            pr.warrentValue = ProdWarr_text.Text;
+            pr.ProductSave();
+
+        }
+
+        private void btnProdUpdate_Click(object sender, EventArgs e)
+        {
+            Product pr = new Product();
+            pr.prodIdValue = int.Parse(ProductId_text.Text);
+            pr.nameValue = ProdName_text.Text;
+            pr.brandValue = ProdBrand_text.Text;
+            pr.countryValue = ProdCon_text.Text;
+            pr.supIdValue = int.Parse(ProdSupid_text.Text);
+            pr.purchPriceValue = int.Parse(ProdPurch_text.Text);
+            pr.salePriceValue = int.Parse(ProdSales_text.Text);
+            pr.warrentValue = ProdWarr_text.Text;
+            pr.ProductUpdate();
+        }
+
+        private void btnProdDelete_Click(object sender, EventArgs e)
+        {
+            Product pr = new Product();
+            pr.prodIdValue = int.Parse(ProductId_text.Text);
+            pr.nameValue = ProdName_text.Text;
+            pr.brandValue = ProdBrand_text.Text;
+            pr.countryValue = ProdCon_text.Text;
+            pr.supIdValue = int.Parse(ProdSupid_text.Text);
+            pr.purchPriceValue = int.Parse(ProdPurch_text.Text);
+            pr.salePriceValue = int.Parse(ProdSales_text.Text);
+            pr.warrentValue = ProdWarr_text.Text;
+            pr.ProductDelete();
+        }
     }
 }

@@ -18,10 +18,10 @@ namespace Metrix
             db.CloseConnection();
             if (x == 1)
             {
-                MessageBox.Show("Saved");
+                MessageBox.Show("Data Saved Successfully");
             }
             else
-                MessageBox.Show("Not saved");
+                MessageBox.Show("Data Not Saved Successfully");
         }
 
         public override void SupplierUpdate()
@@ -33,13 +33,13 @@ namespace Metrix
             db.CloseConnection();
             if (x == 1)
             {
-                MessageBox.Show("Updated");
+                MessageBox.Show("Data Updated Sucesfully");
             }
             else
-                MessageBox.Show("Not updated");
+                MessageBox.Show("Data Not Updated Sucesfully");
         }
 
-        public void SupplierDelete()
+        public override void SupplierDelete()
         {
 
             db.cmd.CommandText = "delete from " + db.db + ".supplier where  SupplierId ='" + supIdValue + "' ;";
@@ -49,10 +49,10 @@ namespace Metrix
             db.CloseConnection();
             if (x == 1)
             {
-                MessageBox.Show("Deleted");
+                MessageBox.Show("Data Deleted Successfully");
             }
             else
-                MessageBox.Show("Not Deleted");
+                MessageBox.Show("Data Not Deleted Successfully");
         }
     }
 }
